@@ -96,6 +96,7 @@
             this.BtnClear.TabIndex = 0;
             this.BtnClear.Text = "C";
             this.BtnClear.UseVisualStyleBackColor = true;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // BtnDel
             // 
@@ -114,6 +115,7 @@
             this.Btn7.TabIndex = 2;
             this.Btn7.Text = "7";
             this.Btn7.UseVisualStyleBackColor = true;
+            this.Btn7.Click += new System.EventHandler(this.Btn7_Click);
             // 
             // Btn8
             // 
@@ -123,6 +125,7 @@
             this.Btn8.TabIndex = 3;
             this.Btn8.Text = "8";
             this.Btn8.UseVisualStyleBackColor = true;
+            this.Btn8.Click += new System.EventHandler(this.Btn8_Click);
             // 
             // Btn9
             // 
@@ -132,6 +135,7 @@
             this.Btn9.TabIndex = 4;
             this.Btn9.Text = "9";
             this.Btn9.UseVisualStyleBackColor = true;
+            this.Btn9.Click += new System.EventHandler(this.Btn9_Click);
             // 
             // Btn6
             // 
@@ -141,6 +145,7 @@
             this.Btn6.TabIndex = 7;
             this.Btn6.Text = "6";
             this.Btn6.UseVisualStyleBackColor = true;
+            this.Btn6.Click += new System.EventHandler(this.Btn6_Click);
             // 
             // Btn5
             // 
@@ -150,6 +155,7 @@
             this.Btn5.TabIndex = 6;
             this.Btn5.Text = "5";
             this.Btn5.UseVisualStyleBackColor = true;
+            this.Btn5.Click += new System.EventHandler(this.Btn5_Click);
             // 
             // Btn4
             // 
@@ -159,6 +165,7 @@
             this.Btn4.TabIndex = 5;
             this.Btn4.Text = "4";
             this.Btn4.UseVisualStyleBackColor = true;
+            this.Btn4.Click += new System.EventHandler(this.Btn4_Click);
             // 
             // Btn3
             // 
@@ -168,6 +175,7 @@
             this.Btn3.TabIndex = 10;
             this.Btn3.Text = "3";
             this.Btn3.UseVisualStyleBackColor = true;
+            this.Btn3.Click += new System.EventHandler(this.Btn3_Click);
             // 
             // Btn2
             // 
@@ -177,6 +185,7 @@
             this.Btn2.TabIndex = 9;
             this.Btn2.Text = "2";
             this.Btn2.UseVisualStyleBackColor = true;
+            this.Btn2.Click += new System.EventHandler(this.Btn2_Click);
             // 
             // Btn1
             // 
@@ -186,6 +195,7 @@
             this.Btn1.TabIndex = 8;
             this.Btn1.Text = "1";
             this.Btn1.UseVisualStyleBackColor = true;
+            this.Btn1.Click += new System.EventHandler(this.Btn1_Click);
             // 
             // BtnComa
             // 
@@ -204,6 +214,7 @@
             this.Btn0.TabIndex = 12;
             this.Btn0.Text = "0";
             this.Btn0.UseVisualStyleBackColor = true;
+            this.Btn0.Click += new System.EventHandler(this.Btn0_Click);
             // 
             // BtnSuma
             // 
