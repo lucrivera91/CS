@@ -178,7 +178,7 @@ namespace Calculadora
 
         private void BtnComa_Click(object sender, EventArgs e)
         {
-            if (!TxtPantalla.Text.EndsWith(",") && !TxtPantalla.Text.Contains(","))
+            if (!TxtPantalla.Text.Contains(","))
             {
                 TxtPantalla.Text += ",";
             }
@@ -277,7 +277,23 @@ namespace Calculadora
 
         private void BtnResultado_Click(object sender, EventArgs e)
         {
+            exp2 = double.Parse(TxtPantalla.Text);
 
+            if (lblOp.Text.EndsWith("/"))
+            {
+                TxtPantalla.Text = (exp1 / exp2).ToString();
+            }
+            else if (lblOp.Text.EndsWith("x"))
+            {
+                TxtPantalla.Text = (exp1 * exp2).ToString();
+            } else if (lblOp.Text.EndsWith("-"))
+            {
+                TxtPantalla.Text = (exp1 - exp2).ToString();
+            }
+            else if (lblOp.Text.EndsWith("+"))
+            {
+                TxtPantalla.Text = (exp1 + exp2).ToString();
+            }
         }
     }
 }
