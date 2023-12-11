@@ -103,7 +103,6 @@
             this.BtnCE.TabIndex = 19;
             this.BtnCE.Text = "CE";
             this.BtnCE.UseVisualStyleBackColor = true;
-            this.BtnCE.Click += new System.EventHandler(this.BtnCE_Click);
             // 
             // BtnResultado
             // 
@@ -114,7 +113,6 @@
             this.BtnResultado.TabIndex = 18;
             this.BtnResultado.Text = "=";
             this.BtnResultado.UseVisualStyleBackColor = true;
-            this.BtnResultado.Click += new System.EventHandler(this.BtnResultado_Click);
             // 
             // BtnSuma
             // 
@@ -125,7 +123,6 @@
             this.BtnSuma.TabIndex = 17;
             this.BtnSuma.Text = "+";
             this.BtnSuma.UseVisualStyleBackColor = true;
-            this.BtnSuma.Click += new System.EventHandler(this.BtnSuma_Click);
             // 
             // BtnResta
             // 
@@ -136,7 +133,6 @@
             this.BtnResta.TabIndex = 16;
             this.BtnResta.Text = "-";
             this.BtnResta.UseVisualStyleBackColor = true;
-            this.BtnResta.Click += new System.EventHandler(this.BtnResta_Click);
             // 
             // BtnX
             // 
@@ -147,7 +143,6 @@
             this.BtnX.TabIndex = 15;
             this.BtnX.Text = "X";
             this.BtnX.UseVisualStyleBackColor = true;
-            this.BtnX.Click += new System.EventHandler(this.BtnX_Click);
             // 
             // BtnDiv
             // 
@@ -158,7 +153,6 @@
             this.BtnDiv.TabIndex = 14;
             this.BtnDiv.Text = "/";
             this.BtnDiv.UseVisualStyleBackColor = true;
-            this.BtnDiv.Click += new System.EventHandler(this.BtnDiv_Click);
             // 
             // BtnComa
             // 
@@ -169,7 +163,7 @@
             this.BtnComa.TabIndex = 13;
             this.BtnComa.Text = ",";
             this.BtnComa.UseVisualStyleBackColor = true;
-            this.BtnComa.Click += new System.EventHandler(this.BtnComa_Click);
+            this.BtnComa.Click += new System.EventHandler(this.BtnExp_click);
             // 
             // Btn0
             // 
@@ -180,7 +174,7 @@
             this.Btn0.TabIndex = 12;
             this.Btn0.Text = "0";
             this.Btn0.UseVisualStyleBackColor = true;
-            this.Btn0.Click += new System.EventHandler(this.Btn0_Click);
+            this.Btn0.Click += new System.EventHandler(this.BtnExp_click);
             // 
             // Btn3
             // 
@@ -191,7 +185,7 @@
             this.Btn3.TabIndex = 10;
             this.Btn3.Text = "3";
             this.Btn3.UseVisualStyleBackColor = true;
-            this.Btn3.Click += new System.EventHandler(this.Btn3_Click);
+            this.Btn3.Click += new System.EventHandler(this.BtnExp_click);
             // 
             // Btn2
             // 
@@ -202,7 +196,7 @@
             this.Btn2.TabIndex = 9;
             this.Btn2.Text = "2";
             this.Btn2.UseVisualStyleBackColor = true;
-            this.Btn2.Click += new System.EventHandler(this.Btn2_Click);
+            this.Btn2.Click += new System.EventHandler(this.BtnExp_click);
             // 
             // Btn1
             // 
@@ -213,7 +207,7 @@
             this.Btn1.TabIndex = 8;
             this.Btn1.Text = "1";
             this.Btn1.UseVisualStyleBackColor = true;
-            this.Btn1.Click += new System.EventHandler(this.Btn1_Click);
+            this.Btn1.Click += new System.EventHandler(this.BtnExp_click);
             // 
             // Btn6
             // 
@@ -224,7 +218,7 @@
             this.Btn6.TabIndex = 7;
             this.Btn6.Text = "6";
             this.Btn6.UseVisualStyleBackColor = true;
-            this.Btn6.Click += new System.EventHandler(this.Btn6_Click);
+            this.Btn6.Click += new System.EventHandler(this.BtnExp_click);
             // 
             // Btn5
             // 
@@ -235,7 +229,7 @@
             this.Btn5.TabIndex = 6;
             this.Btn5.Text = "5";
             this.Btn5.UseVisualStyleBackColor = true;
-            this.Btn5.Click += new System.EventHandler(this.Btn5_Click);
+            this.Btn5.Click += new System.EventHandler(this.BtnExp_click);
             // 
             // Btn4
             // 
@@ -246,7 +240,7 @@
             this.Btn4.TabIndex = 5;
             this.Btn4.Text = "4";
             this.Btn4.UseVisualStyleBackColor = true;
-            this.Btn4.Click += new System.EventHandler(this.Btn4_Click);
+            this.Btn4.Click += new System.EventHandler(this.BtnExp_click);
             // 
             // Btn9
             // 
@@ -257,7 +251,7 @@
             this.Btn9.TabIndex = 4;
             this.Btn9.Text = "9";
             this.Btn9.UseVisualStyleBackColor = true;
-            this.Btn9.Click += new System.EventHandler(this.Btn9_Click);
+            this.Btn9.Click += new System.EventHandler(this.BtnExp_click);
             // 
             // Btn8
             // 
@@ -268,7 +262,7 @@
             this.Btn8.TabIndex = 3;
             this.Btn8.Text = "8";
             this.Btn8.UseVisualStyleBackColor = true;
-            this.Btn8.Click += new System.EventHandler(this.Btn8_Click);
+            this.Btn8.Click += new System.EventHandler(this.BtnExp_click);
             // 
             // Btn7
             // 
@@ -279,7 +273,7 @@
             this.Btn7.TabIndex = 2;
             this.Btn7.Text = "7";
             this.Btn7.UseVisualStyleBackColor = true;
-            this.Btn7.Click += new System.EventHandler(this.Btn7_Click);
+            this.Btn7.Click += new System.EventHandler(this.BtnExp_click);
             // 
             // BtnDel
             // 
@@ -290,7 +284,6 @@
             this.BtnDel.TabIndex = 1;
             this.BtnDel.Text = "<";
             this.BtnDel.UseVisualStyleBackColor = true;
-            this.BtnDel.Click += new System.EventHandler(this.BtnDel_Click);
             // 
             // BtnClear
             // 
@@ -301,7 +294,6 @@
             this.BtnClear.TabIndex = 0;
             this.BtnClear.Text = "C";
             this.BtnClear.UseVisualStyleBackColor = true;
-            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // lblOp
             // 

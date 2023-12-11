@@ -17,7 +17,13 @@ namespace Calculadora
             InitializeComponent();
         }
 
-        double exp1 = 0;
+        private void BtnExp_click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            TxtPantalla.Text += btn.Text;
+        }
+
+        /*double exp1 = 0;
         double exp2 = 0;
         double resultado = 0;
 
@@ -294,6 +300,6 @@ namespace Calculadora
             {
                 TxtPantalla.Text = (exp1 + exp2).ToString();
             }
-        }
+        }*/
     }
 }
