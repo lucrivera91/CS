@@ -17,15 +17,27 @@ namespace Calculadora
             InitializeComponent();
         }
 
-        private void BtnClear_Click(object sender, EventArgs e)
+        double exp1, exp2, resultado = 0;
+
+        private void BtnCE_Click(object sender, EventArgs e)
         {
             TxtPantalla.Clear();
             TxtPantalla.Text = 0.ToString();
+            exp2 = 0;
+        }
+
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            TxtPantalla.Clear();
+            TxtPantalla.Text = "0";
+            lblOp.Text = string.Empty;
+            exp1 = 0;
+            exp2 = 0;
         }
 
         private void Btn7_Click(object sender, EventArgs e)
         {
-            if (TxtPantalla.Text == 0.ToString())
+            if (TxtPantalla.Text == "0")
             {
                 TxtPantalla.Clear();
             }
@@ -38,7 +50,7 @@ namespace Calculadora
 
         private void Btn8_Click(object sender, EventArgs e)
         {
-            if (TxtPantalla.Text == 0.ToString())
+            if (TxtPantalla.Text == "0")
             {
                 TxtPantalla.Clear();
             }
@@ -51,7 +63,7 @@ namespace Calculadora
 
         private void Btn9_Click(object sender, EventArgs e)
         {
-            if (TxtPantalla.Text == 0.ToString())
+            if (TxtPantalla.Text == "0")
             {
                 TxtPantalla.Clear();
             }
@@ -64,7 +76,7 @@ namespace Calculadora
 
         private void Btn4_Click(object sender, EventArgs e)
         {
-            if (TxtPantalla.Text == 0.ToString())
+            if (TxtPantalla.Text == "0")
             {
                 TxtPantalla.Clear();
             }
@@ -77,7 +89,7 @@ namespace Calculadora
 
         private void Btn5_Click(object sender, EventArgs e)
         {
-            if (TxtPantalla.Text == 0.ToString())
+            if (TxtPantalla.Text == "0")
             {
                 TxtPantalla.Clear();
             }
@@ -90,7 +102,7 @@ namespace Calculadora
 
         private void Btn6_Click(object sender, EventArgs e)
         {
-            if (TxtPantalla.Text == 0.ToString())
+            if (TxtPantalla.Text == "0")
             {
                 TxtPantalla.Clear();
             }
@@ -103,7 +115,7 @@ namespace Calculadora
 
         private void Btn1_Click(object sender, EventArgs e)
         {
-            if (TxtPantalla.Text == 0.ToString())
+            if (TxtPantalla.Text == "0")
             {
                 TxtPantalla.Clear();
             }
@@ -116,7 +128,7 @@ namespace Calculadora
 
         private void Btn2_Click(object sender, EventArgs e)
         {
-            if (TxtPantalla.Text == 0.ToString())
+            if (TxtPantalla.Text == "0")
             {
                 TxtPantalla.Clear();
             }
@@ -129,7 +141,7 @@ namespace Calculadora
 
         private void Btn3_Click(object sender, EventArgs e)
         {
-            if (TxtPantalla.Text == 0.ToString())
+            if (TxtPantalla.Text == "0")
             {
                 TxtPantalla.Clear();
             }
@@ -142,10 +154,86 @@ namespace Calculadora
 
         private void Btn0_Click(object sender, EventArgs e)
         {
-            if (TxtPantalla.TextLength >= 1 && TxtPantalla.TextLength <= 15 && TxtPantalla.Text != 0.ToString())
+            if (TxtPantalla.TextLength > 0 && TxtPantalla.TextLength <= 15 && TxtPantalla.Text != "0")
             {
                 TxtPantalla.Text += 0;
             }
+        }
+
+        private void BtnDel_Click(object sender, EventArgs e)
+        {
+            if (TxtPantalla.TextLength == 1)
+            {
+                TxtPantalla.Text = "0";
+            }
+
+            if (TxtPantalla.Text != "0" && TxtPantalla.TextLength > 1) 
+            {
+                string borrar = TxtPantalla.Text.Substring(0, TxtPantalla.TextLength - 1);
+                TxtPantalla.Text = borrar;
+            }
+        }
+
+        private void BtnComa_Click(object sender, EventArgs e)
+        {
+            if (!TxtPantalla.Text.EndsWith(",") && !TxtPantalla.Text.Contains(","))
+            {
+                TxtPantalla.Text += ",";
+            }
+        }
+
+        private void BtnDiv_Click(object sender, EventArgs e)
+        {
+            if (TxtPantalla.Text != "0")
+            {
+                if (exp1 == 0)
+                {
+                    exp1 = double.Parse(TxtPantalla.Text);
+                    lblOp.Text = exp1 + " /";
+                    lblOp.Visible = true;
+                    TxtPantalla.Text = "0";
+                }
+                else
+                {
+                    exp2 = double.Parse(TxtPantalla.Text);
+                    resultado = exp1 / exp2;
+                    lblOp.Text = resultado + " /";
+                    TxtPantalla.Text = resultado.ToString();
+                }
+            }
+        }
+
+        private void BtnX_Click(object sender, EventArgs e)
+        {
+            if (exp1 == 0)
+            {
+                exp1 = double.Parse(TxtPantalla.Text);
+                lblOp.Text = exp1 + " x";
+                lblOp.Visible = true;
+                TxtPantalla.Text = "0";
+            }
+            else
+            {
+                exp2 = double.Parse(TxtPantalla.Text);
+                resultado = exp1 * exp2;
+                lblOp.Text = resultado + " x";
+                TxtPantalla.Text = resultado.ToString();
+            }
+        }
+
+        private void BtnResta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSuma_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnResultado_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
