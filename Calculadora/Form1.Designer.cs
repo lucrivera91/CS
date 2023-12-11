@@ -103,6 +103,7 @@
             this.BtnCE.TabIndex = 19;
             this.BtnCE.Text = "CE";
             this.BtnCE.UseVisualStyleBackColor = true;
+            this.BtnCE.Click += new System.EventHandler(this.BtnCE_Click);
             // 
             // BtnResultado
             // 
@@ -294,6 +295,7 @@
             this.BtnClear.TabIndex = 0;
             this.BtnClear.Text = "C";
             this.BtnClear.UseVisualStyleBackColor = true;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // lblOp
             // 
