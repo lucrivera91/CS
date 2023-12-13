@@ -135,6 +135,8 @@ namespace Calculadora
                     }
             }
             result = double.Parse(TxtScreen.Text);
+            lblOp.Text = result.ToString() + " " + op;
+            op = "";
         }
     }
 }
