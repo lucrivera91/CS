@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TxtPantalla = new System.Windows.Forms.TextBox();
+            this.TxtScreen = new System.Windows.Forms.TextBox();
             this.Panel = new System.Windows.Forms.Panel();
             this.BtnCE = new System.Windows.Forms.Button();
-            this.BtnResultado = new System.Windows.Forms.Button();
-            this.BtnSuma = new System.Windows.Forms.Button();
-            this.BtnResta = new System.Windows.Forms.Button();
+            this.BtnResult = new System.Windows.Forms.Button();
+            this.BtnAdd = new System.Windows.Forms.Button();
+            this.BtnSub = new System.Windows.Forms.Button();
             this.BtnX = new System.Windows.Forms.Button();
             this.BtnDiv = new System.Windows.Forms.Button();
             this.BtnComa = new System.Windows.Forms.Button();
@@ -53,26 +53,26 @@
             this.Panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // TxtPantalla
+            // TxtScreen
             // 
-            this.TxtPantalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPantalla.Location = new System.Drawing.Point(15, 51);
-            this.TxtPantalla.Margin = new System.Windows.Forms.Padding(6);
-            this.TxtPantalla.MaxLength = 16;
-            this.TxtPantalla.Name = "TxtPantalla";
-            this.TxtPantalla.ReadOnly = true;
-            this.TxtPantalla.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TxtPantalla.Size = new System.Drawing.Size(567, 53);
-            this.TxtPantalla.TabIndex = 1;
-            this.TxtPantalla.Text = "\r\n0";
-            this.TxtPantalla.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtScreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtScreen.Location = new System.Drawing.Point(15, 51);
+            this.TxtScreen.Margin = new System.Windows.Forms.Padding(6);
+            this.TxtScreen.MaxLength = 16;
+            this.TxtScreen.Name = "TxtScreen";
+            this.TxtScreen.ReadOnly = true;
+            this.TxtScreen.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TxtScreen.Size = new System.Drawing.Size(567, 53);
+            this.TxtScreen.TabIndex = 1;
+            this.TxtScreen.Text = "\r\n0";
+            this.TxtScreen.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Panel
             // 
             this.Panel.Controls.Add(this.BtnCE);
-            this.Panel.Controls.Add(this.BtnResultado);
-            this.Panel.Controls.Add(this.BtnSuma);
-            this.Panel.Controls.Add(this.BtnResta);
+            this.Panel.Controls.Add(this.BtnResult);
+            this.Panel.Controls.Add(this.BtnAdd);
+            this.Panel.Controls.Add(this.BtnSub);
             this.Panel.Controls.Add(this.BtnX);
             this.Panel.Controls.Add(this.BtnDiv);
             this.Panel.Controls.Add(this.BtnComa);
@@ -105,35 +105,38 @@
             this.BtnCE.UseVisualStyleBackColor = true;
             this.BtnCE.Click += new System.EventHandler(this.BtnCE_Click);
             // 
-            // BtnResultado
+            // BtnResult
             // 
-            this.BtnResultado.Location = new System.Drawing.Point(246, 375);
-            this.BtnResultado.Margin = new System.Windows.Forms.Padding(6);
-            this.BtnResultado.Name = "BtnResultado";
-            this.BtnResultado.Size = new System.Drawing.Size(108, 81);
-            this.BtnResultado.TabIndex = 18;
-            this.BtnResultado.Text = "=";
-            this.BtnResultado.UseVisualStyleBackColor = true;
+            this.BtnResult.Location = new System.Drawing.Point(246, 375);
+            this.BtnResult.Margin = new System.Windows.Forms.Padding(6);
+            this.BtnResult.Name = "BtnResult";
+            this.BtnResult.Size = new System.Drawing.Size(108, 81);
+            this.BtnResult.TabIndex = 18;
+            this.BtnResult.Text = "=";
+            this.BtnResult.UseVisualStyleBackColor = true;
+            this.BtnResult.Click += new System.EventHandler(this.BtnResult_Click);
             // 
-            // BtnSuma
+            // BtnAdd
             // 
-            this.BtnSuma.Location = new System.Drawing.Point(428, 375);
-            this.BtnSuma.Margin = new System.Windows.Forms.Padding(6);
-            this.BtnSuma.Name = "BtnSuma";
-            this.BtnSuma.Size = new System.Drawing.Size(108, 81);
-            this.BtnSuma.TabIndex = 17;
-            this.BtnSuma.Text = "+";
-            this.BtnSuma.UseVisualStyleBackColor = true;
+            this.BtnAdd.Location = new System.Drawing.Point(428, 375);
+            this.BtnAdd.Margin = new System.Windows.Forms.Padding(6);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Size = new System.Drawing.Size(108, 81);
+            this.BtnAdd.TabIndex = 17;
+            this.BtnAdd.Text = "+";
+            this.BtnAdd.UseVisualStyleBackColor = true;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnOp_click);
             // 
-            // BtnResta
+            // BtnSub
             // 
-            this.BtnResta.Location = new System.Drawing.Point(428, 283);
-            this.BtnResta.Margin = new System.Windows.Forms.Padding(6);
-            this.BtnResta.Name = "BtnResta";
-            this.BtnResta.Size = new System.Drawing.Size(108, 81);
-            this.BtnResta.TabIndex = 16;
-            this.BtnResta.Text = "-";
-            this.BtnResta.UseVisualStyleBackColor = true;
+            this.BtnSub.Location = new System.Drawing.Point(428, 283);
+            this.BtnSub.Margin = new System.Windows.Forms.Padding(6);
+            this.BtnSub.Name = "BtnSub";
+            this.BtnSub.Size = new System.Drawing.Size(108, 81);
+            this.BtnSub.TabIndex = 16;
+            this.BtnSub.Text = "-";
+            this.BtnSub.UseVisualStyleBackColor = true;
+            this.BtnSub.Click += new System.EventHandler(this.BtnOp_click);
             // 
             // BtnX
             // 
@@ -142,8 +145,9 @@
             this.BtnX.Name = "BtnX";
             this.BtnX.Size = new System.Drawing.Size(108, 81);
             this.BtnX.TabIndex = 15;
-            this.BtnX.Text = "X";
+            this.BtnX.Text = "x";
             this.BtnX.UseVisualStyleBackColor = true;
+            this.BtnX.Click += new System.EventHandler(this.BtnOp_click);
             // 
             // BtnDiv
             // 
@@ -154,6 +158,7 @@
             this.BtnDiv.TabIndex = 14;
             this.BtnDiv.Text = "/";
             this.BtnDiv.UseVisualStyleBackColor = true;
+            this.BtnDiv.Click += new System.EventHandler(this.BtnOp_click);
             // 
             // BtnComa
             // 
@@ -285,6 +290,7 @@
             this.BtnDel.TabIndex = 1;
             this.BtnDel.Text = "<";
             this.BtnDel.UseVisualStyleBackColor = true;
+            this.BtnDel.Click += new System.EventHandler(this.BtnDel_Click);
             // 
             // BtnClear
             // 
@@ -308,18 +314,17 @@
             this.lblOp.Size = new System.Drawing.Size(567, 20);
             this.lblOp.TabIndex = 0;
             this.lblOp.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.lblOp.Visible = false;
             // 
             // FormCalculadora
             // 
-            this.AcceptButton = this.BtnResultado;
+            this.AcceptButton = this.BtnResult;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(604, 604);
             this.Controls.Add(this.lblOp);
             this.Controls.Add(this.Panel);
-            this.Controls.Add(this.TxtPantalla);
+            this.Controls.Add(this.TxtScreen);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormCalculadora";
@@ -332,11 +337,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox TxtPantalla;
+        private System.Windows.Forms.TextBox TxtScreen;
         private System.Windows.Forms.Panel Panel;
-        private System.Windows.Forms.Button BtnResultado;
-        private System.Windows.Forms.Button BtnSuma;
-        private System.Windows.Forms.Button BtnResta;
+        private System.Windows.Forms.Button BtnResult;
+        private System.Windows.Forms.Button BtnAdd;
+        private System.Windows.Forms.Button BtnSub;
         private System.Windows.Forms.Button BtnX;
         private System.Windows.Forms.Button BtnDiv;
         private System.Windows.Forms.Button BtnComa;
