@@ -15,269 +15,126 @@ namespace Calculadora
         public FormCalculadora()
         {
             InitializeComponent();
+            TxtScreen.Clear();
+            TxtScreen.Text = "0";
         }
 
-        double exp1 = 0;
-        double exp2 = 0;
-        double resultado = 0;
+        double result = 0;
+        string op = "";
+        bool isOpPerformed = false;
+
+        private void BtnExp_click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+
+            if ((TxtScreen.Text == "0" && btn.Text != ",") || isOpPerformed)
+            {
+                TxtScreen.Clear();
+                isOpPerformed = false;
+            }
+
+            switch (btn.Text)
+            {
+                case "0":
+                    {
+                        if (TxtScreen.TextLength <= 15 && (TxtScreen.TextLength > 0 || TxtScreen.Text != "0"))
+                            TxtScreen.Text += btn.Text;
+                        break;
+                    }
+                case ",":
+                    {
+                        if (TxtScreen.TextLength <= 15 && !TxtScreen.Text.Contains(","))
+                            TxtScreen.Text += btn.Text;
+                        break;
+                    }
+                default:
+                    {
+                        if (TxtScreen.TextLength <= 15)
+                            TxtScreen.Text += btn.Text;
+                        break;
+                    }
+            }  
+        }
 
         private void BtnCE_Click(object sender, EventArgs e)
         {
-            TxtPantalla.Clear();
-            TxtPantalla.Text = "0";
+            TxtScreen.Clear();
+            TxtScreen.Text = "0";
         }
 
         private void BtnClear_Click(object sender, EventArgs e)
         {
-            TxtPantalla.Clear();
-            TxtPantalla.Text = "0";
+            TxtScreen.Clear();
+            TxtScreen.Text = "0";
             lblOp.Text = string.Empty;
-            exp1 = 0;
-            exp2 = 0;
-            resultado = 0;
-        }
-
-        private void Btn7_Click(object sender, EventArgs e)
-        {
-            if (TxtPantalla.Text == "0" || TxtPantalla.Text == resultado.ToString())
-            {
-                TxtPantalla.Clear();
-            }
-            
-            if(TxtPantalla.TextLength <= 15)
-            {
-                TxtPantalla.Text += 7;
-            }
-        }
-
-        private void Btn8_Click(object sender, EventArgs e)
-        {
-            if (TxtPantalla.Text == "0" || TxtPantalla.Text == resultado.ToString())
-            {
-                TxtPantalla.Clear();
-            }
-
-            if (TxtPantalla.TextLength <= 15)
-            {
-                TxtPantalla.Text += 8;
-            }
-        }
-
-        private void Btn9_Click(object sender, EventArgs e)
-        {
-            if (TxtPantalla.Text == "0" || TxtPantalla.Text == resultado.ToString())
-            {
-                TxtPantalla.Clear();
-            }
-
-            if (TxtPantalla.TextLength <= 15)
-            {
-                TxtPantalla.Text += 9;
-            }
-        }
-
-        private void Btn4_Click(object sender, EventArgs e)
-        {
-            if (TxtPantalla.Text == "0" || TxtPantalla.Text == resultado.ToString())
-            {
-                TxtPantalla.Clear();
-            }
-
-            if (TxtPantalla.TextLength <= 15)
-            {
-                TxtPantalla.Text += 4;
-            }
-        }
-
-        private void Btn5_Click(object sender, EventArgs e)
-        {
-            if (TxtPantalla.Text == "0" || TxtPantalla.Text == resultado.ToString())
-            {
-                TxtPantalla.Clear();
-            }
-
-            if (TxtPantalla.TextLength <= 15)
-            {
-                TxtPantalla.Text += 5;
-            }
-        }
-
-        private void Btn6_Click(object sender, EventArgs e)
-        {
-            if (TxtPantalla.Text == "0" || TxtPantalla.Text == resultado.ToString())
-            {
-                TxtPantalla.Clear();
-            }
-
-            if (TxtPantalla.TextLength <= 15)
-            {
-                TxtPantalla.Text += 6;
-            }
-        }
-
-        private void Btn1_Click(object sender, EventArgs e)
-        {
-            if (TxtPantalla.Text == "0" || TxtPantalla.Text == resultado.ToString())
-            {
-                TxtPantalla.Clear();
-            }
-
-            if (TxtPantalla.TextLength <= 15)
-            {
-                TxtPantalla.Text += 1;
-            }
-        }
-
-        private void Btn2_Click(object sender, EventArgs e)
-        {
-            if (TxtPantalla.Text == "0" || TxtPantalla.Text == resultado.ToString())
-            {
-                TxtPantalla.Clear();
-            }
-
-            if (TxtPantalla.TextLength <= 15)
-            {
-                TxtPantalla.Text += 2;
-            }
-        }
-
-        private void Btn3_Click(object sender, EventArgs e)
-        {
-            if (TxtPantalla.Text == "0" || TxtPantalla.Text == resultado.ToString())
-            {
-                TxtPantalla.Clear();
-            }
-
-            if (TxtPantalla.TextLength <= 15)
-            {
-                TxtPantalla.Text += 3;
-            }
-        }
-
-        private void Btn0_Click(object sender, EventArgs e)
-        {
-            if (TxtPantalla.TextLength > 0 && TxtPantalla.TextLength <= 15 && TxtPantalla.Text != "0")
-            {
-                TxtPantalla.Text += 0;
-            }
+            result = 0;
+            isOpPerformed = false;
+            op = "";
         }
 
         private void BtnDel_Click(object sender, EventArgs e)
         {
-            if (TxtPantalla.TextLength == 1)
+            if (TxtScreen.TextLength == 1)
             {
-                TxtPantalla.Text = "0";
+                TxtScreen.Text = "0";
             }
 
-            if (TxtPantalla.Text != "0" && TxtPantalla.TextLength > 1) 
+            if (TxtScreen.Text != "0" && TxtScreen.TextLength > 1) 
             {
-                string borrar = TxtPantalla.Text.Substring(0, TxtPantalla.TextLength - 1);
-                TxtPantalla.Text = borrar;
-            }
-        }
-
-        private void BtnComa_Click(object sender, EventArgs e)
-        {
-            if (!TxtPantalla.Text.EndsWith(",") && !TxtPantalla.Text.Contains(","))
-            {
-                TxtPantalla.Text += ",";
+                string del = TxtScreen.Text.Substring(0, TxtScreen.TextLength - 1);
+                TxtScreen.Text = del;
             }
         }
 
-        private void BtnDiv_Click(object sender, EventArgs e)
+        private void BtnOp_click(object sender, EventArgs e)
         {
-            if (TxtPantalla.Text != "0")
+            Button btn = (Button)sender;
+
+            if (result != 0)
             {
-                if (resultado == 0)
-                {
-                    exp1 = double.Parse(TxtPantalla.Text);
-                    lblOp.Text = exp1 + " /";
-                    lblOp.Visible = true;
-                    TxtPantalla.Text = "0";
-                    resultado = exp1;
-                }
-                else
-                {
-                    if (lblOp.Visible == true)
+                BtnResult.PerformClick();
+                op = btn.Text;
+                lblOp.Text = result + " " + op;
+                isOpPerformed = true;
+            }
+            else
+            {
+                op = btn.Text;
+                result = double.Parse(TxtScreen.Text);
+                lblOp.Text = result + " " + op;
+                isOpPerformed = true;
+            }            
+        }
+
+        private void BtnResult_Click(object sender, EventArgs e)
+        {
+            switch (op)
+            {
+                case "+":
                     {
-                        exp2 = double.Parse(TxtPantalla.Text);
-                        resultado = resultado / exp2;
-                        lblOp.Text = resultado + " /";
-                        TxtPantalla.Text = resultado.ToString();
+                        TxtScreen.Text = (result + double.Parse(TxtScreen.Text)).ToString();
+                        break;
                     }
-                }
+                case "-":
+                    {
+                        TxtScreen.Text = (result - double.Parse(TxtScreen.Text)).ToString();
+                        break;
+                    }
+                case "x":
+                    {
+                        TxtScreen.Text = (result * double.Parse(TxtScreen.Text)).ToString();
+                        break;
+                    }
+                case "/":
+                    {
+                        if (TxtScreen.Text != "0")
+                        {
+                            TxtScreen.Text = (result / double.Parse(TxtScreen.Text)).ToString();
+                        }
+                        break;
+                    }
             }
-        }
-
-        private void BtnX_Click(object sender, EventArgs e)
-        {
-            if (resultado == 0)
-            {
-                exp1 = double.Parse(TxtPantalla.Text);
-                lblOp.Text = exp1 + " x";
-                lblOp.Visible = true;
-                TxtPantalla.Text = "0";
-                resultado = exp1;
-            }
-            else
-            {
-                if (lblOp.Visible == true)
-                {
-                    exp2 = double.Parse(TxtPantalla.Text);
-                    resultado = resultado * exp2;
-                    lblOp.Text = resultado + " x";
-                    TxtPantalla.Text = resultado.ToString();
-                }
-            }
-        }
-
-        private void BtnResta_Click(object sender, EventArgs e)
-        {
-            if (resultado == 0)
-            {
-                exp1 = double.Parse(TxtPantalla.Text);
-                lblOp.Text = exp1 + " -";
-                lblOp.Visible = true;
-                TxtPantalla.Text = "0";
-                resultado = exp1;
-            }
-            else
-            {
-                if (lblOp.Visible == true)
-                {
-                    exp2 = double.Parse(TxtPantalla.Text);
-                    resultado = resultado - exp2;
-                    lblOp.Text = resultado + " -";
-                    TxtPantalla.Text = resultado.ToString();
-                }
-            }
-        }
-
-        private void BtnSuma_Click(object sender, EventArgs e)
-        {
-            if (resultado == 0)
-            {
-                exp1 = double.Parse(TxtPantalla.Text);
-                lblOp.Text = exp1 + " +";
-                lblOp.Visible = true;
-                TxtPantalla.Text = "0";
-                resultado = exp1;
-            }
-            else
-            {
-                if (lblOp.Visible == true)
-                {
-                    exp2 = double.Parse(TxtPantalla.Text);
-                    resultado = resultado + exp2;
-                    lblOp.Text = resultado + " +";
-                    TxtPantalla.Text = resultado.ToString();
-                }
-            }
-        }
-
-        private void BtnResultado_Click(object sender, EventArgs e)
-        {
-
+            result = double.Parse(TxtScreen.Text);
         }
     }
 }
