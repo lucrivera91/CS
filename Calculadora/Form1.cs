@@ -90,12 +90,12 @@ namespace Calculadora
         {
             Button btn = (Button)sender;
 
-            if (result != 0)
+            if (result != 0 && isOpPerformed == false)
             {
-                BtnResult.PerformClick();
-                op = btn.Text;
-                lblOp.Text = result + " " + op;
-                isOpPerformed = true;
+                    BtnResult.PerformClick();
+                    op = btn.Text;
+                    lblOp.Text = result + " " + op;
+                    isOpPerformed = true;
             }
             else
             {
@@ -103,7 +103,7 @@ namespace Calculadora
                 result = double.Parse(TxtScreen.Text);
                 lblOp.Text = result + " " + op;
                 isOpPerformed = true;
-            }            
+            }
         }
 
         private void BtnResult_Click(object sender, EventArgs e)
