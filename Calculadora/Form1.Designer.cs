@@ -56,6 +56,7 @@
             // TxtScreen
             // 
             this.TxtScreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtScreen.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.TxtScreen.Location = new System.Drawing.Point(15, 51);
             this.TxtScreen.Margin = new System.Windows.Forms.Padding(6);
             this.TxtScreen.MaxLength = 16;
@@ -64,7 +65,8 @@
             this.TxtScreen.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TxtScreen.Size = new System.Drawing.Size(567, 53);
             this.TxtScreen.TabIndex = 1;
-            this.TxtScreen.Text = "\r\n0";
+            this.TxtScreen.TabStop = false;
+            this.TxtScreen.Text = "0";
             this.TxtScreen.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Panel
@@ -100,18 +102,19 @@
             this.BtnCE.Margin = new System.Windows.Forms.Padding(6);
             this.BtnCE.Name = "BtnCE";
             this.BtnCE.Size = new System.Drawing.Size(108, 81);
-            this.BtnCE.TabIndex = 19;
+            this.BtnCE.TabIndex = 2;
             this.BtnCE.Text = "CE";
             this.BtnCE.UseVisualStyleBackColor = true;
             this.BtnCE.Click += new System.EventHandler(this.BtnCE_Click);
             // 
             // BtnResult
             // 
+            this.BtnResult.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.BtnResult.Location = new System.Drawing.Point(246, 375);
             this.BtnResult.Margin = new System.Windows.Forms.Padding(6);
             this.BtnResult.Name = "BtnResult";
             this.BtnResult.Size = new System.Drawing.Size(108, 81);
-            this.BtnResult.TabIndex = 18;
+            this.BtnResult.TabIndex = 19;
             this.BtnResult.Text = "=";
             this.BtnResult.UseVisualStyleBackColor = true;
             this.BtnResult.Click += new System.EventHandler(this.BtnResult_Click);
@@ -122,7 +125,7 @@
             this.BtnAdd.Margin = new System.Windows.Forms.Padding(6);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(108, 81);
-            this.BtnAdd.TabIndex = 17;
+            this.BtnAdd.TabIndex = 20;
             this.BtnAdd.Text = "+";
             this.BtnAdd.UseVisualStyleBackColor = true;
             this.BtnAdd.Click += new System.EventHandler(this.BtnOp_click);
@@ -144,7 +147,7 @@
             this.BtnX.Margin = new System.Windows.Forms.Padding(6);
             this.BtnX.Name = "BtnX";
             this.BtnX.Size = new System.Drawing.Size(108, 81);
-            this.BtnX.TabIndex = 15;
+            this.BtnX.TabIndex = 12;
             this.BtnX.Text = "x";
             this.BtnX.UseVisualStyleBackColor = true;
             this.BtnX.Click += new System.EventHandler(this.BtnOp_click);
@@ -155,7 +158,7 @@
             this.BtnDiv.Margin = new System.Windows.Forms.Padding(6);
             this.BtnDiv.Name = "BtnDiv";
             this.BtnDiv.Size = new System.Drawing.Size(108, 81);
-            this.BtnDiv.TabIndex = 14;
+            this.BtnDiv.TabIndex = 8;
             this.BtnDiv.Text = "/";
             this.BtnDiv.UseVisualStyleBackColor = true;
             this.BtnDiv.Click += new System.EventHandler(this.BtnOp_click);
@@ -166,7 +169,7 @@
             this.BtnComa.Margin = new System.Windows.Forms.Padding(6);
             this.BtnComa.Name = "BtnComa";
             this.BtnComa.Size = new System.Drawing.Size(108, 81);
-            this.BtnComa.TabIndex = 13;
+            this.BtnComa.TabIndex = 17;
             this.BtnComa.Text = ",";
             this.BtnComa.UseVisualStyleBackColor = true;
             this.BtnComa.Click += new System.EventHandler(this.BtnExp_click);
@@ -177,7 +180,7 @@
             this.Btn0.Margin = new System.Windows.Forms.Padding(6);
             this.Btn0.Name = "Btn0";
             this.Btn0.Size = new System.Drawing.Size(108, 81);
-            this.Btn0.TabIndex = 12;
+            this.Btn0.TabIndex = 18;
             this.Btn0.Text = "0";
             this.Btn0.UseVisualStyleBackColor = true;
             this.Btn0.Click += new System.EventHandler(this.BtnExp_click);
@@ -188,7 +191,7 @@
             this.Btn3.Margin = new System.Windows.Forms.Padding(6);
             this.Btn3.Name = "Btn3";
             this.Btn3.Size = new System.Drawing.Size(108, 81);
-            this.Btn3.TabIndex = 10;
+            this.Btn3.TabIndex = 15;
             this.Btn3.Text = "3";
             this.Btn3.UseVisualStyleBackColor = true;
             this.Btn3.Click += new System.EventHandler(this.BtnExp_click);
@@ -199,7 +202,7 @@
             this.Btn2.Margin = new System.Windows.Forms.Padding(6);
             this.Btn2.Name = "Btn2";
             this.Btn2.Size = new System.Drawing.Size(108, 81);
-            this.Btn2.TabIndex = 9;
+            this.Btn2.TabIndex = 14;
             this.Btn2.Text = "2";
             this.Btn2.UseVisualStyleBackColor = true;
             this.Btn2.Click += new System.EventHandler(this.BtnExp_click);
@@ -210,7 +213,7 @@
             this.Btn1.Margin = new System.Windows.Forms.Padding(6);
             this.Btn1.Name = "Btn1";
             this.Btn1.Size = new System.Drawing.Size(108, 81);
-            this.Btn1.TabIndex = 8;
+            this.Btn1.TabIndex = 13;
             this.Btn1.Text = "1";
             this.Btn1.UseVisualStyleBackColor = true;
             this.Btn1.Click += new System.EventHandler(this.BtnExp_click);
@@ -221,7 +224,7 @@
             this.Btn6.Margin = new System.Windows.Forms.Padding(6);
             this.Btn6.Name = "Btn6";
             this.Btn6.Size = new System.Drawing.Size(108, 81);
-            this.Btn6.TabIndex = 7;
+            this.Btn6.TabIndex = 11;
             this.Btn6.Text = "6";
             this.Btn6.UseVisualStyleBackColor = true;
             this.Btn6.Click += new System.EventHandler(this.BtnExp_click);
@@ -232,7 +235,7 @@
             this.Btn5.Margin = new System.Windows.Forms.Padding(6);
             this.Btn5.Name = "Btn5";
             this.Btn5.Size = new System.Drawing.Size(108, 81);
-            this.Btn5.TabIndex = 6;
+            this.Btn5.TabIndex = 10;
             this.Btn5.Text = "5";
             this.Btn5.UseVisualStyleBackColor = true;
             this.Btn5.Click += new System.EventHandler(this.BtnExp_click);
@@ -243,7 +246,7 @@
             this.Btn4.Margin = new System.Windows.Forms.Padding(6);
             this.Btn4.Name = "Btn4";
             this.Btn4.Size = new System.Drawing.Size(108, 81);
-            this.Btn4.TabIndex = 5;
+            this.Btn4.TabIndex = 9;
             this.Btn4.Text = "4";
             this.Btn4.UseVisualStyleBackColor = true;
             this.Btn4.Click += new System.EventHandler(this.BtnExp_click);
@@ -254,7 +257,7 @@
             this.Btn9.Margin = new System.Windows.Forms.Padding(6);
             this.Btn9.Name = "Btn9";
             this.Btn9.Size = new System.Drawing.Size(108, 81);
-            this.Btn9.TabIndex = 4;
+            this.Btn9.TabIndex = 7;
             this.Btn9.Text = "9";
             this.Btn9.UseVisualStyleBackColor = true;
             this.Btn9.Click += new System.EventHandler(this.BtnExp_click);
@@ -265,7 +268,7 @@
             this.Btn8.Margin = new System.Windows.Forms.Padding(6);
             this.Btn8.Name = "Btn8";
             this.Btn8.Size = new System.Drawing.Size(108, 81);
-            this.Btn8.TabIndex = 3;
+            this.Btn8.TabIndex = 6;
             this.Btn8.Text = "8";
             this.Btn8.UseVisualStyleBackColor = true;
             this.Btn8.Click += new System.EventHandler(this.BtnExp_click);
@@ -276,7 +279,7 @@
             this.Btn7.Margin = new System.Windows.Forms.Padding(6);
             this.Btn7.Name = "Btn7";
             this.Btn7.Size = new System.Drawing.Size(108, 81);
-            this.Btn7.TabIndex = 2;
+            this.Btn7.TabIndex = 5;
             this.Btn7.Text = "7";
             this.Btn7.UseVisualStyleBackColor = true;
             this.Btn7.Click += new System.EventHandler(this.BtnExp_click);
@@ -287,7 +290,7 @@
             this.BtnDel.Margin = new System.Windows.Forms.Padding(6);
             this.BtnDel.Name = "BtnDel";
             this.BtnDel.Size = new System.Drawing.Size(108, 81);
-            this.BtnDel.TabIndex = 1;
+            this.BtnDel.TabIndex = 4;
             this.BtnDel.Text = "<";
             this.BtnDel.UseVisualStyleBackColor = true;
             this.BtnDel.Click += new System.EventHandler(this.BtnDel_Click);
@@ -298,7 +301,7 @@
             this.BtnClear.Margin = new System.Windows.Forms.Padding(6);
             this.BtnClear.Name = "BtnClear";
             this.BtnClear.Size = new System.Drawing.Size(108, 81);
-            this.BtnClear.TabIndex = 0;
+            this.BtnClear.TabIndex = 3;
             this.BtnClear.Text = "C";
             this.BtnClear.UseVisualStyleBackColor = true;
             this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
@@ -326,9 +329,12 @@
             this.Controls.Add(this.Panel);
             this.Controls.Add(this.TxtScreen);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormCalculadora";
             this.Text = "Calculadora";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormCalculadora_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormCalculadora_KeyPress);
             this.Panel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

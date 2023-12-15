@@ -19,6 +19,19 @@ namespace Calculadora
             TxtScreen.Text = "0";
         }
 
+        //Presionar el boton resultado al apretar enter
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                if (ActiveControl.GetType() == typeof(Button) && ActiveControl != AcceptButton)
+                {
+                    ActiveControl = AcceptButton as Button;
+                }
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
         double result = 0;
         string op = "";
         bool isOpPerformed = false;
@@ -137,6 +150,43 @@ namespace Calculadora
             result = double.Parse(TxtScreen.Text);
             lblOp.Text = result.ToString() + " " + op;
             op = "";
+        }
+
+        private void FormCalculadora_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            switch (e.KeyChar)
+            {
+                case '1': Btn1.PerformClick(); break;
+                case '2': Btn2.PerformClick(); break;
+                case '3': Btn3.PerformClick(); break;
+                case '4': Btn4.PerformClick(); break;
+                case '5': Btn5.PerformClick(); break;
+                case '6': Btn6.PerformClick(); break;
+                case '7': Btn7.PerformClick(); break;
+                case '8': Btn8.PerformClick(); break;
+                case '9': Btn9.PerformClick(); break;
+                case '0': Btn0.PerformClick(); break;
+                case ',': BtnComa.PerformClick(); break;
+                case '.': BtnComa.PerformClick(); break;
+                case '/': BtnDiv.PerformClick(); break;
+                case '*': BtnX.PerformClick(); break;
+                case '-': BtnSub.PerformClick(); break;
+                case '+': BtnAdd.PerformClick(); break;
+                case '=': BtnResult.PerformClick(); break;
+                default: break;
+            }
+        }
+
+        private void FormCalculadora_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Back: BtnDel.PerformClick(); break;
+                case Keys.Delete: BtnCE.PerformClick(); break;
+                case Keys.Escape: BtnClear.PerformClick(); break;
+                case Keys.Enter: BtnResult.PerformClick(); break;
+                default: break;
+            }
         }
     }
 }
