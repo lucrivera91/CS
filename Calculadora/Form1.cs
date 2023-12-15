@@ -188,5 +188,23 @@ namespace Calculadora
                 default: break;
             }
         }
+
+        private void BtnTop_Click(object sender, EventArgs e)
+        {
+            if (this.TopMost)
+            {
+                this.TopMost = false;
+                this.FormBorderStyle = FormBorderStyle.Sizable;
+                this.CenterToScreen();
+            }
+                
+            else
+            {
+                this.TopMost = true;
+                Screen scr = Screen.FromPoint(Location);
+                Location = new Point(scr.WorkingArea.Right - Width, scr.WorkingArea.Top);
+                this.FormBorderStyle= FormBorderStyle.SizableToolWindow;
+            }
+        }
     }
 }

@@ -50,11 +50,14 @@
             this.BtnDel = new System.Windows.Forms.Button();
             this.BtnClear = new System.Windows.Forms.Button();
             this.lblOp = new System.Windows.Forms.Label();
+            this.BtnTop = new System.Windows.Forms.Button();
             this.Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // TxtScreen
             // 
+            this.TxtScreen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtScreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtScreen.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.TxtScreen.Location = new System.Drawing.Point(15, 51);
@@ -63,7 +66,7 @@
             this.TxtScreen.Name = "TxtScreen";
             this.TxtScreen.ReadOnly = true;
             this.TxtScreen.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TxtScreen.Size = new System.Drawing.Size(567, 53);
+            this.TxtScreen.Size = new System.Drawing.Size(542, 53);
             this.TxtScreen.TabIndex = 1;
             this.TxtScreen.TabStop = false;
             this.TxtScreen.Text = "0";
@@ -71,6 +74,9 @@
             // 
             // Panel
             // 
+            this.Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Panel.Controls.Add(this.BtnCE);
             this.Panel.Controls.Add(this.BtnResult);
             this.Panel.Controls.Add(this.BtnAdd);
@@ -93,11 +99,13 @@
             this.Panel.Location = new System.Drawing.Point(15, 116);
             this.Panel.Margin = new System.Windows.Forms.Padding(6);
             this.Panel.Name = "Panel";
-            this.Panel.Size = new System.Drawing.Size(567, 479);
+            this.Panel.Size = new System.Drawing.Size(542, 462);
             this.Panel.TabIndex = 1;
             // 
             // BtnCE
             // 
+            this.BtnCE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnCE.Location = new System.Drawing.Point(6, 6);
             this.BtnCE.Margin = new System.Windows.Forms.Padding(6);
             this.BtnCE.Name = "BtnCE";
@@ -109,6 +117,8 @@
             // 
             // BtnResult
             // 
+            this.BtnResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnResult.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.BtnResult.Location = new System.Drawing.Point(246, 375);
             this.BtnResult.Margin = new System.Windows.Forms.Padding(6);
@@ -121,8 +131,13 @@
             // 
             // BtnAdd
             // 
+            this.BtnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAdd.Location = new System.Drawing.Point(428, 375);
             this.BtnAdd.Margin = new System.Windows.Forms.Padding(6);
+            this.BtnAdd.MaximumSize = new System.Drawing.Size(108, 81);
+            this.BtnAdd.MinimumSize = new System.Drawing.Size(108, 81);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(108, 81);
             this.BtnAdd.TabIndex = 20;
@@ -132,8 +147,13 @@
             // 
             // BtnSub
             // 
+            this.BtnSub.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSub.Location = new System.Drawing.Point(428, 283);
             this.BtnSub.Margin = new System.Windows.Forms.Padding(6);
+            this.BtnSub.MaximumSize = new System.Drawing.Size(108, 81);
+            this.BtnSub.MinimumSize = new System.Drawing.Size(108, 81);
             this.BtnSub.Name = "BtnSub";
             this.BtnSub.Size = new System.Drawing.Size(108, 81);
             this.BtnSub.TabIndex = 16;
@@ -143,8 +163,13 @@
             // 
             // BtnX
             // 
+            this.BtnX.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnX.Location = new System.Drawing.Point(428, 190);
             this.BtnX.Margin = new System.Windows.Forms.Padding(6);
+            this.BtnX.MaximumSize = new System.Drawing.Size(108, 81);
+            this.BtnX.MinimumSize = new System.Drawing.Size(108, 81);
             this.BtnX.Name = "BtnX";
             this.BtnX.Size = new System.Drawing.Size(108, 81);
             this.BtnX.TabIndex = 12;
@@ -154,8 +179,13 @@
             // 
             // BtnDiv
             // 
+            this.BtnDiv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnDiv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDiv.Location = new System.Drawing.Point(428, 98);
             this.BtnDiv.Margin = new System.Windows.Forms.Padding(6);
+            this.BtnDiv.MaximumSize = new System.Drawing.Size(108, 81);
+            this.BtnDiv.MinimumSize = new System.Drawing.Size(108, 81);
             this.BtnDiv.Name = "BtnDiv";
             this.BtnDiv.Size = new System.Drawing.Size(108, 81);
             this.BtnDiv.TabIndex = 8;
@@ -165,6 +195,8 @@
             // 
             // BtnComa
             // 
+            this.BtnComa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnComa.Location = new System.Drawing.Point(6, 375);
             this.BtnComa.Margin = new System.Windows.Forms.Padding(6);
             this.BtnComa.Name = "BtnComa";
@@ -176,6 +208,8 @@
             // 
             // Btn0
             // 
+            this.Btn0.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Btn0.Location = new System.Drawing.Point(126, 375);
             this.Btn0.Margin = new System.Windows.Forms.Padding(6);
             this.Btn0.Name = "Btn0";
@@ -187,6 +221,8 @@
             // 
             // Btn3
             // 
+            this.Btn3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Btn3.Location = new System.Drawing.Point(246, 283);
             this.Btn3.Margin = new System.Windows.Forms.Padding(6);
             this.Btn3.Name = "Btn3";
@@ -198,6 +234,8 @@
             // 
             // Btn2
             // 
+            this.Btn2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Btn2.Location = new System.Drawing.Point(126, 283);
             this.Btn2.Margin = new System.Windows.Forms.Padding(6);
             this.Btn2.Name = "Btn2";
@@ -209,6 +247,8 @@
             // 
             // Btn1
             // 
+            this.Btn1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Btn1.Location = new System.Drawing.Point(6, 283);
             this.Btn1.Margin = new System.Windows.Forms.Padding(6);
             this.Btn1.Name = "Btn1";
@@ -220,6 +260,8 @@
             // 
             // Btn6
             // 
+            this.Btn6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Btn6.Location = new System.Drawing.Point(246, 190);
             this.Btn6.Margin = new System.Windows.Forms.Padding(6);
             this.Btn6.Name = "Btn6";
@@ -231,6 +273,8 @@
             // 
             // Btn5
             // 
+            this.Btn5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Btn5.Location = new System.Drawing.Point(126, 190);
             this.Btn5.Margin = new System.Windows.Forms.Padding(6);
             this.Btn5.Name = "Btn5";
@@ -242,6 +286,8 @@
             // 
             // Btn4
             // 
+            this.Btn4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Btn4.Location = new System.Drawing.Point(6, 190);
             this.Btn4.Margin = new System.Windows.Forms.Padding(6);
             this.Btn4.Name = "Btn4";
@@ -253,6 +299,8 @@
             // 
             // Btn9
             // 
+            this.Btn9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Btn9.Location = new System.Drawing.Point(246, 98);
             this.Btn9.Margin = new System.Windows.Forms.Padding(6);
             this.Btn9.Name = "Btn9";
@@ -264,6 +312,8 @@
             // 
             // Btn8
             // 
+            this.Btn8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Btn8.Location = new System.Drawing.Point(126, 98);
             this.Btn8.Margin = new System.Windows.Forms.Padding(6);
             this.Btn8.Name = "Btn8";
@@ -275,6 +325,8 @@
             // 
             // Btn7
             // 
+            this.Btn7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Btn7.Location = new System.Drawing.Point(6, 98);
             this.Btn7.Margin = new System.Windows.Forms.Padding(6);
             this.Btn7.Name = "Btn7";
@@ -286,8 +338,13 @@
             // 
             // BtnDel
             // 
+            this.BtnDel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDel.Location = new System.Drawing.Point(428, 6);
             this.BtnDel.Margin = new System.Windows.Forms.Padding(6);
+            this.BtnDel.MaximumSize = new System.Drawing.Size(108, 81);
+            this.BtnDel.MinimumSize = new System.Drawing.Size(108, 81);
             this.BtnDel.Name = "BtnDel";
             this.BtnDel.Size = new System.Drawing.Size(108, 81);
             this.BtnDel.TabIndex = 4;
@@ -297,6 +354,8 @@
             // 
             // BtnClear
             // 
+            this.BtnClear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnClear.Location = new System.Drawing.Point(126, 6);
             this.BtnClear.Margin = new System.Windows.Forms.Padding(6);
             this.BtnClear.Name = "BtnClear";
@@ -311,12 +370,23 @@
             this.lblOp.AutoEllipsis = true;
             this.lblOp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOp.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblOp.Location = new System.Drawing.Point(15, 9);
+            this.lblOp.Location = new System.Drawing.Point(67, 9);
             this.lblOp.Name = "lblOp";
             this.lblOp.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblOp.Size = new System.Drawing.Size(567, 20);
+            this.lblOp.Size = new System.Drawing.Size(515, 20);
             this.lblOp.TabIndex = 0;
             this.lblOp.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // BtnTop
+            // 
+            this.BtnTop.AutoSize = true;
+            this.BtnTop.Location = new System.Drawing.Point(15, 9);
+            this.BtnTop.Name = "BtnTop";
+            this.BtnTop.Size = new System.Drawing.Size(46, 35);
+            this.BtnTop.TabIndex = 21;
+            this.BtnTop.Text = ">>";
+            this.BtnTop.UseVisualStyleBackColor = true;
+            this.BtnTop.Click += new System.EventHandler(this.BtnTop_Click);
             // 
             // FormCalculadora
             // 
@@ -324,7 +394,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(604, 604);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(570, 604);
+            this.Controls.Add(this.BtnTop);
             this.Controls.Add(this.lblOp);
             this.Controls.Add(this.Panel);
             this.Controls.Add(this.TxtScreen);
@@ -332,6 +404,7 @@
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormCalculadora";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormCalculadora_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormCalculadora_KeyPress);
@@ -365,6 +438,7 @@
         private System.Windows.Forms.Button BtnClear;
         private System.Windows.Forms.Button BtnCE;
         private System.Windows.Forms.Label lblOp;
+        private System.Windows.Forms.Button BtnTop;
     }
 }
 
